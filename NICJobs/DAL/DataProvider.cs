@@ -16,7 +16,7 @@ namespace NICJobs.Provider
 
             try
             {
-                System.Data.Common.DbCommand dbCommandWrapper = db.GetStoredProcCommand("[usp_GetCandidateQuestionResponse]");
+                System.Data.Common.DbCommand dbCommandWrapper = db.GetStoredProcCommand("stored_procedure_name");
                 db.AddInParameter(dbCommandWrapper, "@TestId", DbType.Int32, testId);
                 db.AddInParameter(dbCommandWrapper, "@RegId", DbType.Int32, regId);
                 return db.ExecuteDataSet(dbCommandWrapper);

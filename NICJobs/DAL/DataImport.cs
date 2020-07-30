@@ -11,8 +11,8 @@ namespace NICJobs.DAL
     public class DataImport : IDisposable
     {
         public int ImportDatatoDatabase( string Unique_BenID, string StateName, string StateCode, string DistrictName, 
-            string DistrictCode, string SubDistrictName , string SubDistrictCode,string VillageName,string VillageCode, string Farmer_Name,
-            string Father_Name)
+                                         string DistrictCode, string SubDistrictName , string SubDistrictCode,string VillageName,
+                                         string VillageCode, string Farmer_Name, string Father_Name)
         {
             DatabaseProviderFactory factory = new DatabaseProviderFactory();
             var db = factory.Create("dbconnection");
@@ -43,9 +43,6 @@ namespace NICJobs.DAL
                 db = null;
             }
         }
-
-
-
 
         public void Dispose()
         {

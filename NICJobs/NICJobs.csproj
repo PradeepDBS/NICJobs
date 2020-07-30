@@ -87,5 +87,9 @@
   <ItemGroup>
     <Folder Include="Entity\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB Scripts\FarmerData.Table.sql" />
+    <Content Include="DB Scripts\uasp_FarmerData_StoredProcedure.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

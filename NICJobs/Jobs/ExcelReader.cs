@@ -47,7 +47,7 @@ namespace NICJobs.Jobs
                 ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
                 int colCount = worksheet.Dimension.End.Column;  //get Column Count
                 int rowCount = worksheet.Dimension.End.Row;     //get row count
-
+                // first row is header
                 for (int row = 2; row <= rowCount; row++)
                 {
                     string Unique_BenID = worksheet.Cells[row,1].Text.Replace("&nbsp;", string.Empty).Replace("&#160;", string.Empty).Trim();
